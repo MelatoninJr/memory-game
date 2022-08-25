@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c468c02.css",
-    "main.js": "/static/js/main.7f5e02bb.js",
-    "static/media/mewtwo.png": "/static/media/mewtwo.6142fd9d353737b4f9e8.png",
-    "static/media/starmie.png": "/static/media/starmie.5e053157c5830dc92815.png",
-    "static/media/ninetails.png": "/static/media/ninetails.9af336b8c1a1fabd20b5.png",
-    "static/media/lugia.png": "/static/media/lugia.10d97c4020afd7b6ba7c.png",
-    "static/media/charmander.png": "/static/media/charmander.24789766c088e276b6b6.png",
-    "static/media/ghastly.png": "/static/media/ghastly.68c843aa885efcb7967f.png",
-    "static/media/muk.png": "/static/media/muk.a31bc6349e2b42fba9f5.png",
-    "static/media/mrmime.png": "/static/media/mrmime.6c6087514143e09211b2.png",
-    "static/media/pokemonbackground.jpg": "/static/media/pokemonbackground.b5b71e363401038a725b.jpg",
-    "static/media/mew.png": "/static/media/mew.248975edded162445ca3.png",
-    "static/media/blastoise.png": "/static/media/blastoise.201e8b4fbb16ddbed814.png",
-    "static/media/charizard.png": "/static/media/charizard.38167b2074a0847c4563.png",
-    "static/media/pikachu.png": "/static/media/pikachu.50742e50c18b46c85580.png",
-    "static/media/charmeleon.png": "/static/media/charmeleon.301a3ec3c23fd30ab988.png",
-    "static/media/squirtle.png": "/static/media/squirtle.cc57019380e34f9db018.png",
-    "static/media/gengar.png": "/static/media/gengar.c4e132bd0dd26940ffbc.png",
-    "index.html": "/index.html",
-    "main.0c468c02.css.map": "/static/css/main.0c468c02.css.map",
-    "main.7f5e02bb.js.map": "/static/js/main.7f5e02bb.js.map"
+    "main.css": "/memory-game/static/css/main.6f41ca77.css",
+    "main.js": "/memory-game/static/js/main.c0989acb.js",
+    "static/media/mewtwo.png": "/memory-game/static/media/mewtwo.6142fd9d353737b4f9e8.png",
+    "static/media/starmie.png": "/memory-game/static/media/starmie.5e053157c5830dc92815.png",
+    "static/media/ninetails.png": "/memory-game/static/media/ninetails.9af336b8c1a1fabd20b5.png",
+    "static/media/lugia.png": "/memory-game/static/media/lugia.10d97c4020afd7b6ba7c.png",
+    "static/media/charmander.png": "/memory-game/static/media/charmander.24789766c088e276b6b6.png",
+    "static/media/ghastly.png": "/memory-game/static/media/ghastly.68c843aa885efcb7967f.png",
+    "static/media/muk.png": "/memory-game/static/media/muk.a31bc6349e2b42fba9f5.png",
+    "static/media/mrmime.png": "/memory-game/static/media/mrmime.6c6087514143e09211b2.png",
+    "static/media/pokemonbackground.jpg": "/memory-game/static/media/pokemonbackground.b5b71e363401038a725b.jpg",
+    "static/media/mew.png": "/memory-game/static/media/mew.248975edded162445ca3.png",
+    "static/media/blastoise.png": "/memory-game/static/media/blastoise.201e8b4fbb16ddbed814.png",
+    "static/media/charizard.png": "/memory-game/static/media/charizard.38167b2074a0847c4563.png",
+    "static/media/pikachu.png": "/memory-game/static/media/pikachu.50742e50c18b46c85580.png",
+    "static/media/charmeleon.png": "/memory-game/static/media/charmeleon.301a3ec3c23fd30ab988.png",
+    "static/media/squirtle.png": "/memory-game/static/media/squirtle.cc57019380e34f9db018.png",
+    "static/media/gengar.png": "/memory-game/static/media/gengar.c4e132bd0dd26940ffbc.png",
+    "index.html": "/memory-game/index.html",
+    "main.6f41ca77.css.map": "/memory-game/static/css/main.6f41ca77.css.map",
+    "main.c0989acb.js.map": "/memory-game/static/js/main.c0989acb.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c468c02.css",
-    "static/js/main.7f5e02bb.js"
+    "static/css/main.6f41ca77.css",
+    "static/js/main.c0989acb.js"
   ]
 }
