@@ -165,7 +165,7 @@ const clickMove = (e) => {
           <div className='cardcontainertwo'>
           {randomArray.map((value, index) => (
                   
-                  <div key={index} >{<Card  /*incriment={incriment}*/  clickMove={clickMove} title={randomArray[index].name} imagesource={randomArray[index].image} />}</div>
+                  <div key={index} >{<Card  clickMove={clickMove} title={randomArray[index].name} imagesource={randomArray[index].image} />}</div>
                   ))}
           </div>
           </div>
