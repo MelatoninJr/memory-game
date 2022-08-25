@@ -6,27 +6,28 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 const [cardArray, setCardArray] = useState([
-{name: 'charmander', image: "'./charmander.png'", id:uuidv4()},
-{name: 'charmeleon', image: './charmeleon.png', id:uuidv4()},
-{name: 'charizard', image: './charizard.png', id:uuidv4()},
-{name: 'mew', image: './mew.png', id:uuidv4()},
-{name: 'mewtwo', image: './mewtwo.png', id:uuidv4()},
-{name: 'pikachu', image: './pikachu.png', id:uuidv4()},
-{name: 'muk', image: './muk.png', id:uuidv4()},
-{name: 'ninetails', image: './ninetails.png', id:uuidv4()},
-{name: 'ghastly', image: './ghastly.png', id:uuidv4()},
-{name: 'gengar', image: './gengar.png', id:uuidv4()},
-{name: 'mrmime', image: './mrmime.png', id:uuidv4()},
-{name: 'starmie', image: './starmie.png', id:uuidv4()},
-{name: 'squirtle', image: './squirtle.png', id:uuidv4()},
-{name: 'blastoise', image: './blastoise.png', id:uuidv4()},
-{name: 'lugia', image: './lugia.png', id:uuidv4()},
+{name: 'Charmander', image: './charmander.png', id:uuidv4()},
+{name: 'Charmeleon', image: './charmeleon.png', id:uuidv4()},
+{name: 'Charizard', image: './charizard.png', id:uuidv4()},
+{name: 'Mew', image: './mew.png', id:uuidv4()},
+{name: 'Mewtwo', image: './mewtwo.png', id:uuidv4()},
+{name: 'Pikachu', image: './pikachu.png', id:uuidv4()},
+{name: 'Muk', image: './muk.png', id:uuidv4()},
+{name: 'Minetails', image: './ninetails.png', id:uuidv4()},
+{name: 'Ghastly', image: './ghastly.png', id:uuidv4()},
+{name: 'Gengar', image: './gengar.png', id:uuidv4()},
+{name: 'Mrmime', image: './mrmime.png', id:uuidv4()},
+{name: 'Starmie', image: './starmie.png', id:uuidv4()},
+{name: 'Squirtle', image: './squirtle.png', id:uuidv4()},
+{name: 'Blastoise', image: './blastoise.png', id:uuidv4()},
+{name: 'Lugia', image: './lugia.png', id:uuidv4()},
 
 ])
-const [selectArray, setSelectArray] = useState(['charmander'])
+const [selectArray, setSelectArray] = useState([])
 const [randomArray, setRandomArray] = useState([])
 const [counter, setCounter] = useState(0)
-
+const [highscore, setHighscore] = useState(0)
+let helperarray = []
 
 
 
@@ -45,53 +46,61 @@ const shifter = (e) => {
   }
 
 
-  setRandomArray([...randomArray, cardArray[number2]])
+  //setRandomArray([...randomArray, cardArray[number2]])
+
+  //setCardArray(cardArray.filter(x => {x.index !== number2}))
+ 
+  //console.log(newdemoarray)
+ 
+  //console.log(helperarray, number2)
   randomArray.push(cardArray[number2])
+  helperarray.push(cardArray[number2])
+  //setRandomArray(helperarray)
   cardArray.splice(number2, 1)
+
+  //console.log(randomArray)
   
+
 }
+console.log(randomArray)
 
 
-const incriment = (e) => {
-  setCounter(counter + 1)
-}
-/*
-useEffect(() => {
-  for(let i = 0; i < 16; i++) {
-
-    //shifter()
-  }
-})*/
 
 for(let i = 0; i < 16; i++) {
   shifter()
 }
 
+
+
+//helper ray is full
+//random array is what we base generation off of and it is also full
+//onclick I need to set helper and random to [] AND set card array back to full so I can reshuffle
+//setting select array to [] only happens when you lose so you can start a new game
+
+
+
+
+
+
 const clickMove = (e) => {
-  let nameevent = e.target
-  console.log(selectArray)
-  const isBelowThreshold = (currentValue) => (currentValue !== e.target.id)
+  let nameevent = e.target.closest('.cardcontainer')
 
-
+ 
+  const isBelowThreshold = (currentValue) => (currentValue !== nameevent.id)
  
 
 
 
 
 
-
-
-
-
-
-  for(let i =0; i < 16; i++) {
-    shifter()
-  }
-
-
     if(selectArray.every(isBelowThreshold) === false) {
       setCounter(0)
       console.log('You lose')
+      if(counter > highscore) {
+        setHighscore(counter)
+      }
+      setSelectArray([])
+
       
       
     } else if(selectArray.every(isBelowThreshold) === true){     
@@ -99,32 +108,35 @@ const clickMove = (e) => {
           selectArray.push(nameevent.getAttribute('id'))
           setCounter(counter + 1)
           console.log('You dont lose')
- 
+
     }
 
     setCardArray([
       
-    {name: 'charmander', image: "'./charmander.png'", id:uuidv4()},
-    {name: 'charmeleon', image: './charmeleon.png', id:uuidv4()},
-    {name: 'charizard', image: './charizard.png', id:uuidv4()},
-    {name: 'mew', image: './mew.png', id:uuidv4()},
-    {name: 'mewtwo', image: './mewtwo.png', id:uuidv4()},
-    {name: 'pikachu', image: './pikachu.png', id:uuidv4()},
-    {name: 'muk', image: './muk.png', id:uuidv4()},
-    {name: 'ninetails', image: './ninetails.png', id:uuidv4()},
-    {name: 'ghastly', image: './ghastly.png', id:uuidv4()},
-    {name: 'gengar', image: './gengar.png', id:uuidv4()},
-    {name: 'mrmime', image: './mrmime.png', id:uuidv4()},
-    {name: 'starmie', image: './starmie.png', id:uuidv4()},
-    {name: 'squirtle', image: './squirtle.png', id:uuidv4()},
-    {name: 'blastoise', image: './blastoise.png', id:uuidv4()},
-    {name: 'lugia', image: './lugia.png', id:uuidv4()},
+      {name: 'Charmander', image: './charmander.png', id:uuidv4()},
+      {name: 'Charmeleon', image: './charmeleon.png', id:uuidv4()},
+      {name: 'Charizard', image: './charizard.png', id:uuidv4()},
+      {name: 'Mew', image: './mew.png', id:uuidv4()},
+      {name: 'Mewtwo', image: './mewtwo.png', id:uuidv4()},
+      {name: 'Pikachu', image: './pikachu.png', id:uuidv4()},
+      {name: 'Muk', image: './muk.png', id:uuidv4()},
+      {name: 'Minetails', image: './ninetails.png', id:uuidv4()},
+      {name: 'Ghastly', image: './ghastly.png', id:uuidv4()},
+      {name: 'Gengar', image: './gengar.png', id:uuidv4()},
+      {name: 'Mrmime', image: './mrmime.png', id:uuidv4()},
+      {name: 'Starmie', image: './starmie.png', id:uuidv4()},
+      {name: 'Squirtle', image: './squirtle.png', id:uuidv4()},
+      {name: 'Blastoise', image: './blastoise.png', id:uuidv4()},
+      {name: 'Lugia', image: './lugia.png', id:uuidv4()},
   
     
   
   ])
-
+  helperarray = []
   setRandomArray([])
+
+  //console.log(helperarray, randomArray, cardArray)
+
   for(let j = 0; j < 16; j++ ) {
     shifter()
   }
@@ -139,11 +151,17 @@ const clickMove = (e) => {
     <div className="App">
       <div className='container'>
           <div className='header'>
-            Matching
+          Pokémon Matching
           </div>
+          <div className ='countercontainer'>
+            <div className='counter'> High Score - {highscore}</div>
+            <div className='counter'> Current Score - {counter}</div>
 
+          </div>
           <div className='body'>
-            <div className='counter'>{counter}</div>
+ 
+
+
           <div className='cardcontainertwo'>
           {randomArray.map((value, index) => (
                   
